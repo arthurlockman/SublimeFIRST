@@ -6,15 +6,28 @@ Prerequisites
 ---
 In order for this build system to run, you have to install and configure [UCPP](https://github.com/nikitakit/ucpp), and ensure that you can build a project with it. This will require that you install Wine and wput if you're on a Mac or Linux machine. The easiest way that I found to configure it is to use the linux-windriver variant, and have an existing WindRiver install to go off of. 
 
+Make sure that you create a symbolic link to the ucpp/ucpp folder in your bin. Do this by running this command (edit out the part that says "PATH_TO_UCPP" and replace it with the path to your UCPP base install.
+
+	cd /opt/local/bin
+	ln -s /[PATH_TO_UCPP]/ucpp/ucpp 
+
 Instructions
 ---
-Configure the project which you want to build with SublimeFIRST using **ucpp configure** and **ucpp init**. Then, install the FRC.sublime-build script into your **~/[Sublime Text Settings Folder]/Packages/User** folder by just dropping it in (on the Mac, this folder is in ~/Application Support/Sublime Text 2/Packages/User). You should then be able to select FRC from your Tools > Build System menu. 
+Install the FRC.sublime-build script into your **~/[Sublime Text Settings Folder]/Packages/User** folder by just dropping it in (on the Mac, this folder is in ~/Application Support/Sublime Text 2/Packages/User). You should then be able to select FRC from your Tools > Build System menu. 
+
+If you've never built your project with UCPP before, you'll need to follow these next instructions. Once you've selected FRC as a build system, bring up the ST command prompt by pressing **Command-Shift-P**. Type "UCPP Setup" into that box. Press enter, and wait for it to finish. Then, bring up the same prompt and type "UCPP Regenerate Makefile". Once that's done, you should be able to just press **Command-B** to build your project, and **Command-Shift-B** to upload it.
 
 Usage
 ---
 Simply press **Command-B** to build the project using UCPP. Build errors will show up in the ST 2 console. 
 
-Press **Command-Shift-B** to upload the project to the robot. Remember to press Cmd-B first, to ensure that you are uploading the most recent compile of the code.
+Press **Command-Shift-B** to build and upload the project to the robot. 
+
+Press **Command-Shift-P** and type in **UCPP Regenerate Makefile** every time you add or remove files from the project to regenerate the project's makefile. 
+
+Press **Command-Shift-P** and type in **Debug Run** to deploy the code in UCPP debug mode.
+
+Press **Command-Shift-P** and type in **Debug Build** to build the code in UCPP debug mode.
 
 Notes
 ---

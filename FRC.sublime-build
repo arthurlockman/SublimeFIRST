@@ -1,12 +1,24 @@
 {
-    "cmd": ["make"],
+    "cmd": ["make", "DEBUG_MODE=0"],
     "working_dir": "${project_path:${folder}}",
-    "path": "/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin",
-    
+    "path": "/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin/ucpp/",
+
     "variants": [
 
-        { "cmd": ["make deploy"],
+        { "cmd": ["make","deploy","DEBUG_MODE=0"],
           "name": "Run"
+        },
+        { "cmd": ["ucpp","configure"],
+          "name": "UCPP Renerate Makefiles"
+        },
+        { "cmd": ["ucpp","init"],
+          "name": "UCPP Setup"
+        },
+        { "cmd": ["make","deploy"],
+          "name": "Debug Run"
+        },
+        { "cmd": ["make"],
+          "name": "Debug Build"
         }
     ]
 }
