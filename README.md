@@ -25,10 +25,6 @@ Press **Command-Shift-B** to build and upload the project to the robot.
 
 Press **Command-Shift-P** and type in **UCPP Regenerate Makefile** every time you add or remove files from the project to regenerate the project's makefile. 
 
-Press **Command-Shift-P** and type in **Debug Run** to deploy the code in UCPP debug mode.
-
-Press **Command-Shift-P** and type in **Debug Build** to build the code in UCPP debug mode.
-
 Notes
 ---
 Anyone can use this code to build their projects. I can't guarantee it'll work for everyone, but I can try to help if it doesn't. Please also note that this build system isn't complete yet. I'm still adding features. It will be complete by the time the 2013 season rolls around, so that it can be used for actual development. 

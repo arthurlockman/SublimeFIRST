@@ -1,11 +1,11 @@
 {
-    "cmd": ["make", "DEBUG_MODE=0"],
+    "cmd": ["make"],
     "working_dir": "${project_path:${folder}}",
-    "path": "/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin/ucpp/",
+    "path": "/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:{$plugins:User:SublimeFIRST:ucpp:ucpp}",
 
     "variants": [
 
-        { "cmd": ["make","deploy","DEBUG_MODE=0"],
+        { "cmd": ["make","deploy"],
           "name": "Run"
         },
         { "cmd": ["ucpp","configure"],
@@ -13,12 +13,6 @@
         },
         { "cmd": ["ucpp","init"],
           "name": "UCPP Setup"
-        },
-        { "cmd": ["make","deploy"],
-          "name": "Debug Run"
-        },
-        { "cmd": ["make"],
-          "name": "Debug Build"
         }
     ]
 }
