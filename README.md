@@ -13,7 +13,7 @@ Make sure that you create a symbolic link to the ucpp/ucpp folder in your bin. D
 
 Instructions
 ---
-Install the FRC.sublime-build script into your **~/[Sublime Text Settings Folder]/Packages/User** folder by just dropping it in (on the Mac, this folder is in ~/Application Support/Sublime Text 2/Packages/User). You should then be able to select FRC from your Tools > Build System menu. 
+Install the FRC.sublime-build script into your **~/[Sublime Text Settings Folder]/Packages/User** folder by just dropping it in (on the Mac, this folder is in ~/Library/Application Support/Sublime Text 2/Packages/User). You should then be able to select FRC from your Tools > Build System menu. 
 
 If you've never built your project with UCPP before, you'll need to follow these next instructions. Once you've selected FRC as a build system, bring up the ST command prompt by pressing **Command-Shift-P**. Type "UCPP Setup" into that box. Press enter, and wait for it to finish. Then, bring up the same prompt and type "UCPP Regenerate Makefile". Once that's done, you should be able to just press **Command-B** to build your project, and **Command-Shift-B** to upload it.
 
